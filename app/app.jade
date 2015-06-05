@@ -1,0 +1,15 @@
+template(name="home")
+	+background
+	.container
+		.jumbotron
+			h1 SPICKY!
+			p 
+				| You want more? Ask 
+				a(href="mailto:schneider.da@gmx.ch" target="_blank") me!
+
+template(name="background")
+	
+	+momentum(plugin="fade")
+		each fotis
+			if show index
+				.background(style="background-image: url({{src}})")
