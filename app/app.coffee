@@ -15,6 +15,6 @@ Router.route "/",
 
 if Meteor.isClient 
 	do setRandomImage = -> Session.set "currentFotiIndex",_.sample [1..16]
-	Meteor.setInterval setRandomImage, 5000
+	Meteor.setInterval setRandomImage, 10000
 	Template.background.helpers
 		show: -> @index is Session.get "currentFotiIndex"
